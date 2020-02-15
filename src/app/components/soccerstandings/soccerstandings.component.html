@@ -1,0 +1,16 @@
+<div class="standings-table" *ngIf="standings">
+  <table class="table table-borderless">
+    <thead>
+
+      <tr>
+        <th></th>
+        <th *ngFor="let h of th" scope="col">{{h}}</th>
+      </tr>
+    </thead>
+    <tbody [@listAnimation]="standings.length">
+      <tr *ngFor="let s of standings">
+        <td *ngFor="let td of s">{{td.replace('ES11® ','')}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

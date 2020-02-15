@@ -1,0 +1,83 @@
+.song {
+  opacity: 1;
+  position: relative;
+  width: 535px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  font-family: "Bebas Neue", cursive;
+  transform: translateX(0px);
+  letter-spacing: 4px;
+  transition: all 420ms ease;
+
+  &__bg {
+    opacity: 0.8;
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    object-fit: cover;
+    z-index: -10;
+    filter: blur(20px) brightness(1);
+  }
+
+  &__cover {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    z-index: 10;
+  }
+
+  &__btn {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    img {
+      opacity: 0.7;
+      -webkit-filter: drop-shadow(5px 5px 5px rgba(34, 34, 34, 0.7));
+      height: 60%;
+      width: 60%;
+      object-fit: cover;
+      margin-top: 54%;
+      margin-left: 20%;
+      transform: rotate(90deg) translateX(-50%);
+      filter: saturate(0) drop-shadow(5px 5px 5px rgba(34, 34, 34, 0.7));
+      mix-blend-mode: screen;
+    }
+  }
+
+  &__info {
+    padding: 16px;
+    width: 100%;
+
+    h2 {
+      margin: 0;
+      color: #f2f2f2;
+    }
+
+    marquee {
+      h3 {
+        margin: 0;
+        color: #f2f2f29f;
+
+        span {}
+      }
+    }
+
+  }
+}
+
+.hide {
+  transform: translateX(-50px);
+  opacity: 0;
+}

@@ -1,0 +1,72 @@
+<button (click)="addPlayer()">ADD PLAYER</button>
+<ng-container *ngIf="!adding; else s">
+  <div *ngFor="let p of lineup" class="item">
+    <div class="item__position">
+      <p>
+        {{p.position}}
+      </p>
+    </div>
+    <div class="item__name">
+      <select class="form-control">
+        <option value="">{{p.name}}</option>
+        <option *ngFor="let player of players">{{player}}</option>
+      </select>
+      <!-- <input type="text" value="{{p.name}}"> -->
+
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #s>
+  <div class="item">
+    <div class="item__position">
+      <p>
+        name:
+      </p>
+    </div>
+    <div class="item__name">
+      <input #name type="text" value="{{p.name}}" (keyup.enter)="onEnter(name.value)">
+
+    </div>
+  </div>
+</ng-template>
+<!-- 
+
+for (var p in lineup) {
+  var newElement = document.createElement("div");
+  newElement.className = "item";
+  var positionElement = document.createElement("div");
+  positionElement.className = "item__position";
+
+  var nameElement = document.createElement("div");
+  nameElement.className = "item__name";
+
+  var position = document.createElement("p");
+  position.innerHTML = lineup[p].position;
+
+  var nameItem = document.createElement("p");
+  nameItem.innerHTML = lineup[p].name;
+
+  nameElement.appendChild(nameItem);
+  positionElement.appendChild(position);
+  newElement.appendChild(positionElement);
+  newElement.appendChild(nameElement);
+  document.body.appendChild(newElement);
+}
+
+$(document).ready(function() {
+  var items = document.querySelectorAll(".item");
+  var time = 0;
+  for (let item of items) {
+    item.classList.add("move");
+  }
+
+  setTimeout(() => {
+    for (let item of items) {
+      item.classList.remove("move");
+    }
+  }, 7500);
+  //   img
+  //     .css({ opacity: 0.5, top: centerY, left: centerX })
+  //     .animate({ opacity: 1, height: "200px", top: 0, left: 0 });
+}); -->

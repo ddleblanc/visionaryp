@@ -1,0 +1,39 @@
+{
+  "name": "cwp",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node app"
+  },
+  "dependencies": {
+    "@types/express": "^4.16.0",
+    "@types/socket.io": "^2.1.2",
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "cookie-parser": "^1.4.3",
+    "cors": "*",
+    "express": "^4.16.4",
+    "jsonwebtoken": "*",
+    "mocha": "^5.2.0",
+    "mongoose": "*",
+    "multer": "^1.4.1",
+    "passport": "*",
+    "passport-jwt": "*",
+    "puppeteer": "^2.1.1",
+    "query-string": "^6.2.0",
+    "request": "^2.88.0",
+    "socket.io": "^2.2.0"
+  },
+  "author": "Daniel le Blanc",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-typescript": "^5.0.0",
+    "typescript": "^3.2.2",
+    "ws": "3.3.2"
+  }
+}

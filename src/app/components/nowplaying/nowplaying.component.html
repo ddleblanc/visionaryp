@@ -1,0 +1,23 @@
+<a id="get-auth" href="http://localhost:3000/spotify/spotify_login"></a>
+
+<div *ngIf="nowPlaying" id="song" class="song">
+  <img class="song__bg" src="{{ nowPlaying.item.album.images[0].url }}" alt="" />
+  <img class="song__cover" src="{{ nowPlaying.item.album.images[0].url }}" alt="" />
+  <div class="song__btn">
+    <!-- <img src="https://image.flaticon.com/icons/svg/483/483054.svg" alt=""> -->
+    <img src="https://thumbs.gfycat.com/BlushingBrownLamb-max-1mb.gif" alt="" />
+  </div>
+
+  <div class="song__info">
+    <h2>{{ nowPlaying.item.name }}</h2>
+    <marquee behavior="alternate" scrollamount="2" width="100%">
+      <h3>
+        <span *ngFor="let a of nowPlaying.item.artists">{{ a.name }} </span>
+      </h3>
+    </marquee>
+
+  </div>
+</div>
+
+
+<video width="352" height="198" src="http://pc1.paisy.xyz/hls/live.m3u8" type="application/x-mpegURL"></video>

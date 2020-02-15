@@ -12,8 +12,12 @@ import { PlayersComponent } from "./components/players/players.component";
 import { Es11standingsComponent } from "./components/es11standings/es11standings.component";
 import { Es11Service } from "./services/es11.service";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { SoccerstandingsComponent } from './components/soccerstandings/soccerstandings.component';
-import { CamComponent } from './components/cam/cam.component';
+import { SoccerstandingsComponent } from "./components/soccerstandings/soccerstandings.component";
+import { CamComponent } from "./components/cam/cam.component";
+import { NewstickerComponent } from "./components/newsticker/newsticker.component";
+import { CommonModule } from "@angular/common";
+import { DashboardComponent } from "./components/dashboard/dashboard.component";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -24,13 +28,17 @@ import { CamComponent } from './components/cam/cam.component';
     PlayersComponent,
     Es11standingsComponent,
     SoccerstandingsComponent,
-    CamComponent
+    CamComponent,
+    NewstickerComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CommonModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [SpotifyService, Es11Service],
   bootstrap: [AppComponent]

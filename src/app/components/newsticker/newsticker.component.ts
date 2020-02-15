@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { SoccerService } from "src/app/services/soccer.service";
+import { DashboardService } from "src/app/services/dashboard.service";
 
 @Component({
   selector: "app-newsticker",
@@ -10,16 +11,7 @@ export class NewstickerComponent implements OnInit {
   liveScores = [];
   upcoming = [];
   liveData: any;
-  messages = [
-    {
-      subject: "Team update",
-      message: "starz united just took 1st place. lets go starz!"
-    },
-    {
-      subject: "Trials",
-      message: "message me if you think you got what it takes"
-    }
-  ];
+  messages;
 
   results = [
     {
@@ -65,7 +57,10 @@ export class NewstickerComponent implements OnInit {
   //     //     .animate({ opacity: 1, height: "200px", top: 0, left: 0 });
   // });
 
-  constructor(private soccerService: SoccerService) {}
+  constructor(
+    private soccerService: SoccerService,
+    private dashboardService: DashboardService
+  ) {}
 
   ngOnInit() {
     this.soccerService.getLivescore().subscribe(data => {
@@ -77,5 +72,6 @@ export class NewstickerComponent implements OnInit {
         this.liveScores.push(data);
       }
     });
+    this.messages = this.dashboardService.messages;
   }
 }

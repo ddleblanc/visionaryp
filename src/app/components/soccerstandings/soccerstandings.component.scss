@@ -4,6 +4,7 @@ table {
   letter-spacing: 4px;
   border-collapse: separate;
   border: none;
+
   thead {
     background: rgba(0, 0, 0, 0.9);
     color: #fff;
@@ -14,40 +15,41 @@ table {
     tr {
       border: none;
       color: #fff;
-      background: rgba(0, 0, 0, 0.55);
+      background: rgba(0, 0, 0, 0.8);
+
+      td {
+        text-align: center;
+      }
     }
 
     tr:nth-child(even) {
-      background: rgba(0, 0, 0, 0.8);
+      background: rgba(0, 0, 0, 0.75);
     }
   }
 }
+
 th {
   text-align: center;
 }
-// th:nth-child(3) {
-//   text-align: left;
-// }
-// th:nth-child(3) {
-//   text-align: left;
-// }
 
+// th:nth-child(3) {
+//   text-align: left;
+// }
+// th:nth-child(3) {
+//   text-align: left;
+// }
 .standings-table {
   height: 700px;
   overflow-y: scroll;
   overflow-x: hidden;
   padding-bottom: 400px;
   -ms-overflow-style: none;
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1),
-    rgba(0, 0, 0, 0) 97%
-  );
-  mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1),
-    rgba(0, 0, 0, 0) 97%
-  );
+  -webkit-mask-image: linear-gradient(to bottom,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0) 98%);
+  mask-image: linear-gradient(to bottom,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0) 98%);
 
   &::-webkit-scrollbar {
     display: none;

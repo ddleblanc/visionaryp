@@ -3,8 +3,21 @@
     <thead>
 
       <tr>
-        <th></th>
-        <th *ngFor="let h of th" scope="col">{{h}}</th>
+
+        <!-- <th *ngFor="let h of th" scope="col">{{h}}</th> -->
+        <th scope="col"></th>
+        <th scope="col">POS</th>
+        <th scope="col"></th>
+        <th scope="col">MP</th>
+        <th scope="col">W</th>
+        <th scope="col">D</th>
+        <th scope="col">L</th>
+        <th scope="col">GF</th>
+        <th scope="col">GA</th>
+        <th scope="col">GD</th>
+        <th scope="col">PTS</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
       </tr>
     </thead>
     <tbody [@listAnimation]="standings.length">

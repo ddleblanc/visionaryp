@@ -4,18 +4,38 @@ table {
   letter-spacing: 4px;
 
   thead {
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 1);
     color: #f2f2f2;
   }
 
   tbody {
     tr {
       color: #f2f2f2;
-      background: rgba(0, 0, 0, 0.45);
+      background: rgba(0, 0, 0, 1);
     }
 
     tr:nth-child(even) {
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 1);
     }
+  }
+}
+
+.standings-table {
+  height: 700px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-bottom: 400px;
+  -ms-overflow-style: none;
+  -webkit-mask-image: linear-gradient(to bottom,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 1) 90%,
+      rgba(0, 0, 0, 0) 99.99%);
+  mask-image: linear-gradient(to bottom,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 1) 90%,
+      rgba(0, 0, 0, 0) 99.99%);
+
+  &::-webkit-scrollbar {
+    display: none;
   }
 }

@@ -1,0 +1,62 @@
+<div class="ticker-wrap">
+  <div class="ticker" id="ticker">
+    <ng-container *ngIf="upcoming.length > 0">
+      <div *ngFor="let u of upcoming" class="ticker__item">
+        <span class="color-accent">
+          {{u.time}}
+        </span>
+        <span class="color-primary">
+          {{u.homeTeam.name}}
+        </span>
+        <span class="color-primary">
+          vs
+        </span>
+        <span class="color-primary">
+          {{u.awayTeam.name}}
+        </span>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="liveScores.length > 0">
+      <div *ngFor="let l of liveScores" class="ticker__item">
+        <span class="color-accent">
+          la liga
+        </span>
+        <span class="color-primary">
+          {{l.homeTeam.name}} {{l.homeTeam.score}}
+        </span>
+        <span class="color-primary">
+          -
+        </span>
+        <span class="color-primary">
+          {{l.awayTeam.score}} {{l.awayTeam.name}}
+        </span>
+      </div>
+    </ng-container>
+
+    <div *ngFor="let m of messages" class="ticker__item">
+      <span class="color-accent">
+        {{m.subject}}
+      </span>
+      <span class="color-primary">
+        {{m.message}}
+      </span>
+    </div>
+    <div *ngFor="let r of results" class="ticker__item">
+      <ng-container *ngIf="r.home != undefined">
+        <span class="color-accent">
+          {{r.home}}
+        </span>
+      </ng-container>
+
+      <span class="color-primary">
+        {{r.result}}
+      </span>
+      <ng-container *ngIf="r.away != undefined">
+        <span class="color-accent">
+          {{r.away}}
+        </span>
+      </ng-container>
+
+    </div>
+  </div>
+</div>

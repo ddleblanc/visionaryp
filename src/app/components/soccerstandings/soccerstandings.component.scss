@@ -6,7 +6,7 @@ table {
   border: none;
 
   thead {
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 1);
     color: #fff;
     border: none;
   }
@@ -15,7 +15,7 @@ table {
     tr {
       border: none;
       color: #fff;
-      background: rgba(0, 0, 0, 0.8);
+      background: rgba(0, 0, 0, 1);
 
       td {
         text-align: center;
@@ -23,7 +23,7 @@ table {
     }
 
     tr:nth-child(even) {
-      background: rgba(0, 0, 0, 0.75);
+      background: rgba(0, 0, 0, 1);
     }
   }
 }

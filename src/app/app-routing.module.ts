@@ -9,7 +9,6 @@ import { Es11standingsComponent } from "./components/es11standings/es11standings
 import { SoccerstandingsComponent } from "./components/soccerstandings/soccerstandings.component";
 import { CamComponent } from "./components/cam/cam.component";
 import { NewstickerComponent } from "./components/newsticker/newsticker.component";
-import { DashboardComponent } from "./components/dashboard/dashboard.component";
 
 const routes: Routes = [
   { path: "nowplaying-spotify", component: NowplayingComponent },
@@ -19,8 +18,7 @@ const routes: Routes = [
   { path: "es11standings", component: Es11standingsComponent },
   { path: "soccerstandings", component: SoccerstandingsComponent },
   { path: "cam", component: CamComponent },
-  { path: "news", component: NewstickerComponent },
-  { path: "", component: DashboardComponent }
+  { path: "news", component: NewstickerComponent }
 ];
 
 @NgModule({

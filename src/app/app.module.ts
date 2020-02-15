@@ -16,7 +16,6 @@ import { SoccerstandingsComponent } from "./components/soccerstandings/soccersta
 import { CamComponent } from "./components/cam/cam.component";
 import { NewstickerComponent } from "./components/newsticker/newsticker.component";
 import { CommonModule } from "@angular/common";
-import { DashboardComponent } from "./components/dashboard/dashboard.component";
 import { FormsModule } from "@angular/forms";
 
 @NgModule({
@@ -29,8 +28,7 @@ import { FormsModule } from "@angular/forms";
     Es11standingsComponent,
     SoccerstandingsComponent,
     CamComponent,
-    NewstickerComponent,
-    DashboardComponent
+    NewstickerComponent
   ],
   imports: [
     BrowserModule,

@@ -21,19 +21,19 @@ table {
 }
 
 .standings-table {
-  height: 700px;
+  height: 805px;
   overflow-y: scroll;
   overflow-x: hidden;
-  padding-bottom: 400px;
-  -ms-overflow-style: none;
-  -webkit-mask-image: linear-gradient(to bottom,
-      rgba(0, 0, 0, 1),
-      rgba(0, 0, 0, 1) 90%,
-      rgba(0, 0, 0, 0) 99.99%);
-  mask-image: linear-gradient(to bottom,
-      rgba(0, 0, 0, 1),
-      rgba(0, 0, 0, 1) 90%,
-      rgba(0, 0, 0, 0) 99.99%);
+  // padding-bottom: 400px;
+  // -ms-overflow-style: none;
+  // -webkit-mask-image: linear-gradient(to bottom,
+  //     rgba(0, 0, 0, 1),
+  //     rgba(0, 0, 0, 1) 90%,
+  //     rgba(0, 0, 0, 0) 99.99%);
+  // mask-image: linear-gradient(to bottom,
+  //     rgba(0, 0, 0, 1),
+  //     rgba(0, 0, 0, 1) 90%,
+  //     rgba(0, 0, 0, 0) 99.99%);
 
   &::-webkit-scrollbar {
     display: none;
